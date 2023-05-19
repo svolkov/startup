@@ -30,3 +30,25 @@ It makes it very easy to create and single- and multi-node Kubernetes k3s cluste
 | **Minikube** | Easy setup and management of a single-node and multi-node Kubernetes cluster. Support for multiple operating systems and architectures. Integration with kubectl for managing and interacting with the cluster. Optional add-ons to enhance cluster functionality. Ingress and load balancing support. Popularity, Community support and active development. Experimental Podman support.                                                                                                        | Additional features like monitoring require integration with third-party tools. Resource-intensive, may require a machine with sufficient resources to run smoothly. Lack of built-in support for automatic cluster provisioning. Poor automation options: there is no configuration file.     |
 | **Kind**     | Lightweight and fast setup of Kubernetes clusters using Docker containers. Support for multiple operating systems and architectures. Full compatibility with the standard Kubernetes API and tools. Customization and extensibility of clusters through Kubernetes configuration. Suitable for local development, testing, and CI pipelines. Easy creation and deletion of clusters through the CLI. Podman support. yml-file for configuration.                                                 | Lack of built-in monitoring or control features. Additional tools or integrations needed for monitoring and cluster management. Lack of automated cluster provisioning.                                                                                                                        |
 | **k3d**      | Lightweight and fast creation of Kubernetes clusters using Docker containers. Support for multiple operating systems and architectures. Integration with container runtimes like Docker and containerd. Customization and extensibility of clusters through Kubernetes configuration. Networking support for container communication within the cluster. Load balancer integration for exposing services. Suitable for local development, testing, and CI pipelines. yml-file for configuration. | Lack of built-in monitoring or control features. Additional tools or integrations needed for monitoring and cluster management. Lack of automated cluster provisioning. Cluster scalability may be limited based on machine resources and Docker license limitations. Podman is not supported. |
+
+4.Demo
+
+4.1 Minikube
+
+![Screenshot_minikube_service](https://github.com/svolkov/startup/assets/9334152/d41815ca-2d62-473c-bc85-a16215151747)
+
+4.2 Kind
+
+![screenshot_kind_service](https://github.com/svolkov/startup/assets/9334152/23b0b423-1f7b-4405-b6a3-e57c42eab785)
+
+
+4.3 k3d
+
+![screenshot_k3d_service](https://github.com/svolkov/startup/assets/9334152/00faf2a4-eaa9-4eec-9591-2274ce093690)
+
+
+5.Conclusion
+
+To get local environment in a simple and quick way, Kind and k3d would be the right choice based on its ability to read configuration file at the start.
+If Docker license limitation will be critical for the startup, the Kind is the choice based on its Podman support. 
+
